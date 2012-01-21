@@ -3,6 +3,11 @@ VPATH+=
 
 CFLAGS+= -DHAS_NO_IV_GET_DEFAULT_FONT
 
+ifndef BUILD
+BUILD=emu
+endif
+
+
 ifeq (${BUILD},emu)
 CFLAGS+=`freetype-config --cflags`
 endif
